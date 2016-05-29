@@ -1,23 +1,22 @@
 {
     "name": "picklewagon/request-logger",
     "type": "library",
-    "description": ":package_description",
+    "description": "Add logging to your laravel and lumen applications.",
     "keywords": [
-        "Picklewagon",
-        "RequestLogger"
+        "picklewagon",
+        "laravel",
+        "lumen"
     ],
     "homepage": "https://github.com/picklewagon/request-logger",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
-            "role": "Developer"
+            "name": "Josh Harrison",
+            "email": "josh@picklewagon.com"
         }
     ],
     "require": {
-        "illuminate/support": "~5.1",
+        "illuminate/support": "~5.2",
         "php" : "~5.5|~7.0"
     },
     "require-dev": {
