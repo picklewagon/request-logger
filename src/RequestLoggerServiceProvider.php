@@ -3,6 +3,7 @@
 namespace Picklewagon\RequestLogger;
 
 use Illuminate\Support\ServiceProvider;
+use Picklewagon\RequestLogger\Http\Middleware\LogRequest;
 
 class RequestLoggerServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,6 @@ class RequestLoggerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app['router']->middleware('LogRequest', LogRequest::class);
     }
 }
