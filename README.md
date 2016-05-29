@@ -26,7 +26,7 @@ or, if you are using Lumen:
 
 ```php
 // Lumen: bootstrap/app.php
-$app->register(Picklewagon\RequestLogger\RequestLoggerLumenServiceProvider::class);
+$app->register(Picklewagon\RequestLogger\RequestLoggerServiceProvider::class);
 ```
 
 ## Change log
