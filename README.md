@@ -17,7 +17,7 @@ Next up, the service provider must be registered:
 // Laravel5: config/app.php
 'providers' => [
     ...
-    Picklewagon\RequestLogger\RequestLoggerServiceProvider::class,
+    Picklewagon\RequestLogger\LaravelServiceProvider::class,
 
 ];
 ```
@@ -26,7 +26,7 @@ or, if you are using Lumen:
 
 ```php
 // Lumen: bootstrap/app.php
-$app->register(Picklewagon\RequestLogger\RequestLoggerServiceProvider::class);
+$app->register(Picklewagon\RequestLogger\LumenServiceProvider::class);
 ```
 
 ## Change log

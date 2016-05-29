@@ -5,7 +5,7 @@ namespace Picklewagon\RequestLogger;
 use Illuminate\Support\ServiceProvider;
 use Picklewagon\RequestLogger\Http\Middleware\LogRequest;
 
-class RequestLoggerServiceProvider extends ServiceProvider
+class LaravelServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
