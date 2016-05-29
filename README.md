@@ -11,13 +11,6 @@ Via Composer
 $ composer require picklewagon/request-logger
 ```
 
-## Usage
-
-``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
-```
-
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
