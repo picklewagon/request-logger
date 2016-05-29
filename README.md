@@ -1,14 +1,32 @@
-# Request Logger
+# A request logger for Laravel 5 and Lumen
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
 PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
 
-Via Composer
+You can pull in the package via composer:
 
 ``` bash
 $ composer require picklewagon/request-logger
+```
+
+Next up, the service provider must be registered:
+
+```php
+// Laravel5: config/app.php
+'providers' => [
+    ...
+    Picklewagon\RequestLogger\RequestLoggerServiceProvider::class,
+
+];
+```
+
+or, if you are using Lumen:
+
+```php
+// Lumen: bootstrap/app.php
+$app->register(Picklewagon\RequestLogger\RequestLoggerLumenServiceProvider::class);
 ```
 
 ## Change log
