@@ -14,7 +14,7 @@ class LumenServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->routeMiddleware(['cors' => LogRequest::class]);
+        //
     }
 
     /**
@@ -24,6 +24,6 @@ class LumenServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->middleware([LogRequest::class]);
     }
 }
