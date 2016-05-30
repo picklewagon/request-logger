@@ -12,6 +12,7 @@ class LogRequest
         Log::info('LogRequest#handle', [
             'method' => $_SERVER['REQUEST_METHOD'],
             'request' => $request->all(),
+            'request_uri' => $_SERVER['REQUEST_URI'],
         ]);
         return $next($request);
     }
@@ -21,7 +22,8 @@ class LogRequest
         Log::info('LogRequest#terminate', [
             'method' => $_SERVER['REQUEST_METHOD'],
             'request' => $request->all(),
-            'response' => $response
+            'response' => $response,
+            'request_uri' => $_SERVER['REQUEST_URI'],
         ]);
     }
 }
