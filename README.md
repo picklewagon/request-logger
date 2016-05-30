@@ -18,7 +18,6 @@ Next up, the service provider must be registered:
 'providers' => [
     ...
     Picklewagon\RequestLogger\LaravelServiceProvider::class,
-
 ];
 ```
 
