@@ -3,7 +3,7 @@
 namespace Picklewagon\RequestLogger;
 
 use Illuminate\Support\ServiceProvider;
-use Picklewagon\RequestLogger\Http\Middleware\LogRequest;
+use Picklewagon\RequestLogger\Middleware\LogRequest;
 
 class LumenServiceProvider extends ServiceProvider
 {
