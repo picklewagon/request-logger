@@ -3,8 +3,9 @@
 namespace Picklewagon\RequestLogger;
 
 use Illuminate\Support\ServiceProvider;
+use Picklewagon\RequestLogger\Middleware\LogRequest;
 
-class RequestLoggerServiceProvider extends ServiceProvider
+class LumenServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
@@ -23,6 +24,6 @@ class RequestLoggerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->middleware([LogRequest::class]);
     }
 }
