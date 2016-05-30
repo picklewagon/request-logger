@@ -9,21 +9,34 @@ class LogRequest
 {
     public function handle($request, Closure $next)
     {
-        Log::info('LogRequest#handle', [
-            'method' => $_SERVER['REQUEST_METHOD'],
-            'request' => $request->all(),
-            'request_uri' => $_SERVER['REQUEST_URI'],
-        ]);
+        $data = $this->dataFromRequest($request);
+        Log::info('LogRequest#handle', $data);
+
         return $next($request);
     }
 
     public function terminate($request, $response)
     {
-        Log::info('LogRequest#terminate', [
+        $data = array_merge(
+            $this->dataFromRequest($request),
+            $this->dataFromResponse($response)
+        );
+        Log::info('LogRequest#terminate', $data);
+    }
+
+    private function dataFromRequest($request)
+    {
+        return [
             'method' => $_SERVER['REQUEST_METHOD'],
             'request' => $request->all(),
-            'response' => $response,
             'request_uri' => $_SERVER['REQUEST_URI'],
-        ]);
+        ];
+    }
+
+    private function dataFromResponse($response)
+    {
+        return [
+            'response' => $response,
+        ];
     }
 }
