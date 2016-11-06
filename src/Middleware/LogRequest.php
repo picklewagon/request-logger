@@ -26,11 +26,13 @@ class LogRequest
 
     private function dataFromRequest($request)
     {
-        return [
-            'method' => $_SERVER['REQUEST_METHOD'],
+        $response = [
+            'method' => (isset($_SERVER['REQUEST_METHOD'])) ? $_SERVER['REQUEST_METHOD'] : '',
             'request' => $request->all(),
-            'request_uri' => $_SERVER['REQUEST_URI'],
+            'request_uri' => (isset($_SERVER['REQUEST_URI'])) ? $_SERVER['REQUEST_URI'] : '',
         ];
+
+        return $response;
     }
 
     private function dataFromResponse($response)
